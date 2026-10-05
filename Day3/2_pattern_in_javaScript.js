@@ -13,7 +13,7 @@ let prompt = require('prompt-sync')();
 
 
 // n = 5
-let n= prompt("Enter n :"); 
+let n= Number(prompt("Enter n :")); 
 // for(let i=0; i<=n; i++){
 //     for(let j=0; j<=n; j++){
 //         process.stdout.write("* ");
@@ -68,12 +68,35 @@ let n= prompt("Enter n :");
 //     console.log();
 // }
 
-for(let i=0; i<n; i++){
-    for(let j=0; j<n-i-1; j++){
-        process.stdout.write(" ");
-    }
-    for(let j=0; j<=i; j++){
-        process.stdout.write("*");
+// for(let i=0; i<n; i++){
+//     for(let j=0; j<n-i-1; j++){
+//         process.stdout.write(" ");
+//     }
+//     for(let j=0; j<=i; j++){
+//         process.stdout.write("*");
+//     }
+//     console.log();
+// }
+
+// for(let i=0; i<n; i++){
+//     for(let j=0; j<n-i; j++){
+//         process.stdout.write("*");
+//     }
+//     for(let j=0; j<=i; j++){
+//         process.stdout.write(" ");
+//     }
+//     console.log();
+// }
+
+
+for(let i=1; i<=n; i++){
+    for(let j=1; j<=n; j++){
+        if(i==j || i+j==n+1){
+            process.stdout.write("* ");
+        }
+        else{
+            process.stdout.write("  ");
+        }
     }
     console.log();
 }
