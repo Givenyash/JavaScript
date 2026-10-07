@@ -26,6 +26,7 @@
 let prompt = require('prompt-sync')();
 let arr = [1, 2, 3, 4, 5];
 let k = Number(prompt("Enter K :"));
+k = k % arr.length;
 
 function reverse(i, j){
 
