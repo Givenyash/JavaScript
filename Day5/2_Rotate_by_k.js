@@ -1,3 +1,5 @@
+//Brute Force
+
 let prompt = require('prompt-sync')();
 let n = Number(prompt("Enter size of array"));
 let arr = new Array(n);
@@ -8,7 +10,11 @@ for (let i = 0; i < n; i++) {
 
 let k = Number(prompt("Enter k : "));
 
-for(let j=0; j<k; j++){
+let r = k % n;
+let count = 0;
+
+for(let j=0; j<r; j++){
+    count++;
     let copy = arr[0];
 
     for(let i=0; i<n-1; i++){
@@ -18,3 +24,4 @@ for(let j=0; j<k; j++){
 }
 
 console.log(arr);
+console.log(count);  // runs 2 times only
